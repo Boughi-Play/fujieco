@@ -7,6 +7,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\PdfController;
+use App\Http\Controllers\NewsletterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,5 @@ Route::resource("/blog", BlogController::class)->middleware("isConnected");
 
 Route::resource("/video", VideoController::class)->middleware("isConnected");
 
+
+Route::post("/newsletter", [NewsletterController::class, "store"]);

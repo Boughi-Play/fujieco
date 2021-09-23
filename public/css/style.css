@@ -796,6 +796,10 @@ section {
     padding: 150px 0;
 }
 
+.testimonials h2 {
+    color: #d30909;
+
+}
 .testimonials::before {
     content: "";
     background: #1b1b1b;
@@ -809,12 +813,12 @@ section {
 
 }
 
-.testimonials #portfolio-flters {
+.testimonials #testimonials-flters {
     list-style: none;
     margin-bottom: 50px;
 }
 
-.testimonials #portfolio-flters li {
+.testimonials #testimonials-flters li {
     color: white;
     cursor: pointer;
     display: inline-block;
@@ -826,13 +830,13 @@ section {
     transition: all 0.3s ease-in-out;
 }
 
-.testimonials #portfolio-flters li:hover,
-.testimonials #portfolio-flters li.filter-active {
+.testimonials #testimonials-flters li:hover,
+.testimonials #testimonials-flters li.filter-active {
     color: #d30909;
 }
 
-.testimonials #portfolio-flters li.filter-active::before,
-.testimonials #portfolio-flters li.filter-active::after {
+.testimonials #testimonials-flters li.filter-active::before,
+.testimonials #testimonials-flters li.filter-active::after {
     color: #d30909;
 }
 
@@ -963,10 +967,7 @@ section {
     z-index: 10;
 }
 
-.agenda .container h2 {
-    color: white;
 
-}
 
 /*--------------------------------------------------------------
 # Footer
@@ -976,12 +977,14 @@ section {
     font-size: 14px;
     position: relative;
     padding: 150px 0;
+
+
 }
 
 #newsletter::before {
     content: "";
-    background: url("../img/footer-bg.jpg") center center no-repeat;
-    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+
     overflow: hidden;
     position: absolute;
     bottom: 60px;
@@ -989,6 +992,20 @@ section {
     left: 0;
     right: 0;
     transform: skewY(-3deg);
+    z-index: -10;
+}
+#newsletter::after {
+    content: "";
+
+    background: url("../img/footer-bg.jpg") center center no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    bottom: 60px;
+    top: 60px;
+    left: 0;
+    right: 0;
+    transform: skewY(-3deg);
+    z-index: -20;
 
 }
 

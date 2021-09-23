@@ -230,6 +230,33 @@
 
   });
 
+
+  // window.addEventListener('load', () => {
+  //   let testimonialsContainer = select('.swiper-container');
+  //   if (testimonialsContainer) {
+  //     let testimonialsIsotope = new Isotope(testimonialsContainer, {
+  //       itemSelector: '.swiper-wrapper',
+  //       layoutMode: 'fitRows'
+
+  //     });
+
+  //     let testimonialsFilters = select('#testimonials-flters li', true);
+
+  //     on('click', '#testimonials-flters li', function(e) {
+  //       e.preventDefault();
+  //       testimonialsFilters.forEach(function(el) {
+  //         el.classList.remove('filter-active');
+  //       });
+  //       this.classList.add('filter-active');
+
+  //       testimonialsIsotope.arrange({
+  //         filter: this.getAttribute('data-filter')
+  //       });
+  //     }, true);
+  //   }
+
+  // });
+
   /**
    * Initiate portfolio lightbox 
    */
@@ -237,22 +264,6 @@
     selector: '.portfolio-lightbox'
   });
 
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
 
   /**
    * Preloader

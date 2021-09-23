@@ -49,7 +49,6 @@ class BlogController extends Controller
         $blog->path = $request->file("path")->hasName();
         $request->file("path")->storePublicly("img", "public");
 
-
         $blog->date = $request->date;
         $blog->title = $request->title;
         $blog->category = $request->category;
@@ -99,7 +98,6 @@ class BlogController extends Controller
             "link" => 'required',
         ]);
 
-        Storage::disk("public")->delete("img/"  .  $blog->path);
         $blog->path = $request->file("path")->hashName();
         $request->file("path")->storePublicly("img", "public");
 

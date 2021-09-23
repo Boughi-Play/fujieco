@@ -43,24 +43,21 @@
                 headerToolbar: {
                     left: 'prev,next today',
                     center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,listYear'
+                    right: 'dayGridMonth,listYear'
                 },
                 locale: '{{ config('app.locale') }}',
                 events: JSON.parse(@this.events),
                 editable: true,
                 eventResize: info => @this.eventChange(info.event),
                 eventDrop: info => @this.eventChange(info.event),
-                // if (Auth::check) {
-                //     selectable: true,
-                    
-                // } else {
-                //     selectable: false,
-                // }
+
 
                                     selectable: true,
 
 
                 select: arg => {
+                    @if(auth()->check() && auth()->user()->email == 'admin@fujitsu.com')
+                    
                     const title = prompt('Titre :');
                     const id = create_UUID();
 
@@ -75,12 +72,16 @@
                         @this.eventAdd(calendar.getEventById(id));
                     };
                     calendar.unselect();
+                    @endif
                 },
                 eventClick: info => {
+                    @if(auth()->check() && auth()->user()->email == 'admin@fujitsu.com')
                     if (confirm("Voulez-vous vraiment supprimer cet événement ?")) {
                         info.event.remove();
                         @this.eventRemove(info.event.id);
                     }
+                
+                    @endif
                 }
 
 

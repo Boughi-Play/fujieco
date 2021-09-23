@@ -67,7 +67,6 @@
                     <li><a class="nav-link scrollto " href="#videos">Videos</a></li>
                     <li><a class="nav-link scrollto" href="#testimonials">News</a></li>
                     <li><a class="nav-link scrollto" href="#agenda">Agenda</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -168,6 +167,9 @@
         <section id="videos" class="portfolio">
             <div class="container">
 
+                <div class="section-title text-center">
+                    <h2>VIDEOS</h2>
+                </div>
 
                 <ul id="portfolio-flters" class="d-flex justify-content-center">
                     <li data-filter="*" class="filter-active">Latest</li>
@@ -178,7 +180,7 @@
 
                 <div class="row portfolio-container">
                     @foreach ($video as $e)
-                        <div class="video portfolio-item {{ $e->category }}" >
+                        <div class="video portfolio-item {{ $e->category }}">
                             <div class="portfolio-info">
                                 <h4>{{ $e->title }}</h4>
                                 <p>{{ $e->subtitle }}</p>
@@ -205,26 +207,26 @@
 
             <div class="container" data-aos="fade-up">
 
-                {{-- <div class="section-title text-center">
+                <div class="section-title text-center">
                     <h2>NEWS</h2>
-                </div> --}}
+                </div>
 
-                <ul id="portfolio-flters" class="d-flex justify-content-center">
+                {{-- <ul id="testimonials-flters" class="d-flex justify-content-center">
                     <li data-filter="*" class="filter-active">Latest</li>
-                    <li data-filter=".successful-challenge">Event</li>
+                    <li data-filter=".event">Event</li>
                     <li data-filter=".partners">Partner</li>
                     <li data-filter=".successful-challenge">CHALLENGE</li>
                     <li data-filter=".ecosystem-general">ECOSYSTEM</li>
-                </ul>
+                </ul> --}}
 
 
                 <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="200">
                     <div class="swiper-wrapper">
-                        @foreach ($blog as $e)
-                            <div class="swiper-slide" class="{{ $e->category }}">
+                        {{-- @foreach ($blog as $e)
+                            <div class="swiper-slide {{ $e->category }}">
                                 <div class="testimonial-item">
                                     <div class="post-box">
-                                        <div class="post-img"><img src="{{ $e->path }}"
+                                        <div class="post-img"><img src="img/{{ $e->path }}"
                                                 class="img-fluid" alt=""></div>
                                         <span class="post-date">{{ $e->date }}</span>
                                         <h3 class="post-title">{{ $e->title }}</h3>
@@ -234,7 +236,7 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                        @endforeach --}}
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
@@ -244,7 +246,7 @@
                                     <span class="post-date">Fri, August 06</span>
                                     <h3 class="post-title">Building single point of contact solution for
                                         international law enforcement cooperation</h3>
-                                    <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read
+                                    <a href="https://apps.ts.fujitsu.com/ecosystem/member/challengedetail.aspx?challenge=12" target="_blank" class="readmore stretched-link mt-auto"><span>Read
                                             More</span><i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -258,7 +260,7 @@
                                     <span class="post-date">Fri, July 02</span>
                                     <h3 class="post-title">Fujitsu and Jasna Rok announced their new longterm
                                         partnership</h3>
-                                    <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read
+                                    <a href="https://www.fujitsu.com/be/about/resources/news/press-releases/2021/fujitsu-belgium-and-jasna-rok-announce-partnership.html" target="_blank" class="readmore stretched-link mt-auto"><span>Read
                                             More</span><i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -272,8 +274,8 @@
                                     <span class="post-date">Sat, August 11</span>
                                     <h3 class="post-title">A new model, “Business to Everyone” (#B2E), focuses on
                                         the needs of all people, whether if it’s employees, customers, citizens or
-                                        society at large.</h3>
-                                    <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read
+                                        society at large</h3>
+                                    <a href="https://www.fujitsu.com/hk/vision/insights/21-the-world-at-an-inflection-point/" target="_blank" class="readmore stretched-link mt-auto"><span>Read
                                             More</span><i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -287,7 +289,7 @@
                                     <span class="post-date">Tue, September 02</span>
                                     <h3 class="post-title">Incrius joins Partnership Ecosystem. A new SUPERPOWER !
                                     </h3>
-                                    <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read
+                                    <a href="https://apps.ts.fujitsu.com/ecosystem/public/partnerdetail.aspx?partner=434225" target="_blank" class="readmore stretched-link mt-auto"><span>Read
                                             More</span><i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -301,7 +303,7 @@
                                     <span class="post-date">Fri, July 2</span>
                                     <h3 class="post-title">Work Reform for Healthcare Professionals Essential for
                                         Safe Healthcare Service</h3>
-                                    <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read
+                                    <a href="https://www.fujitsu.com/jp/microsite/fujitsutransformationnews-en/2021-06-18/02/" target="_blank" class="readmore stretched-link mt-auto"><span>Read
                                             More</span><i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -320,9 +322,9 @@
 
             <div class="container">
 
-                {{-- <div class="section-title text-center">
+                <div class="section-title text-center">
                     <h2>AGENDA</h2>
-                </div> --}}
+                </div>
 
                 <livewire:calendar />
 
@@ -334,19 +336,16 @@
 
                 <div class="container">
 
-                    <div class="row  justify-content-center">
-                        <div class="col-lg-6">
-                            <h3>Fujitsu</h3>
-                            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime
-                                saepe
-                                commodi
-                                placeat.</p>
-                        </div>
+                    <div class="section-title text-center">
+                        <h2>NEWSLETTER</h2>
+                        <h4>subscribe to our newsletter to be informed of our latest news!</h4>
                     </div>
+
 
                     <div class="row form-newsletter justify-content-center">
                         <div class="col-lg-6">
-                            <form action="" method="post">
+                            <form action="{{ URL('/newsletter') }}" method="post">
+                                @csrf
                                 <input type="email" name="email" placeholder="Enter your Email">
                                 <input type="submit" value="Subscribe">
                             </form>

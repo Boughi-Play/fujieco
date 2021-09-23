@@ -25,8 +25,7 @@
 
         <div class="form-group">
             <label for="exampleInputPassword1">Image</label>
-            <input type="file" class="form-control" id="exampleInputPassword1" name="path"
-            value="{{ $blog->path }}">
+            <input type="file" id="exampleInputPassword1" name="path" value="{{ $blog->path }}">
         </div>
 
         <div class="form-group">

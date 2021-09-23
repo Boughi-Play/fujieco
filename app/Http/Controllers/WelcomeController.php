@@ -15,4 +15,6 @@ class WelcomeController extends Controller
 
         return view("welcome", compact('video','blog'));
     }
+
+
 }

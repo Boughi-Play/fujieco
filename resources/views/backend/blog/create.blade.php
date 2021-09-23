@@ -25,7 +25,7 @@
     
     <div class="form-group">
         <label for="exampleInputPassword1">Image</label>
-        <input type="file" class="form-control" id="exampleInputPassword1" name="path">
+        <input type="file"  name="path">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Date</label>

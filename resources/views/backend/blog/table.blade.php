@@ -52,14 +52,17 @@
                                     <td>{{ $e->id }}</td>
                                     <td>{{ $e->date }}</td>
 
-                                    <td><img src="{{ asset("img/$e->path") }}" alt="" class="img-fluid"></td>
                                     <td>{{ $e->title }}</td>
                                     <td>{{ $e->category }}</td>
                                     <td>{{ $e->link }}</td>
+                                    <td>
+                                        <img src="{{ asset("img/$e->path") }}" class="img-fluid" alt="">
+                                    </td>
+                                    {{-- <td><img src="{{ asset("img/$e->path") }}" alt="" class=""></td> --}}
                                     <td class="d-flex">
-                                        <a href="/video/{{ $e->id }}/edit" class="btn btn-success">Edit</a>
+                                        <a href="/blog/{{ $e->id }}/edit" class="btn btn-success">Edit</a>
 
-                                        <form action="/video/{{ $e->id }}" method="post">
+                                        <form action="/blog/{{ $e->id }}" method="post">
                                             @csrf
                                             @method("delete")
                                             <button class="btn btn-danger ml-2" type="submit">Delete</button>

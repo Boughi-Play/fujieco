@@ -9,12 +9,14 @@ class Calendar extends Component
     public $events = [];
     public function eventChange($event)
     {
-        $e = Event::find($event['id']);
-        $e->start = $event['start'];
-        if(Arr::exists($event, 'end')) {
-            $e->end = $event['end'];
+        if(auth()->check() && auth()->user()->email == 'admin@fujitsu.com'){
+            $e = Event::find($event['id']);
+            $e->start = $event['start'];
+            if(Arr::exists($event, 'end')) {
+                $e->end = $event['end'];
+            }
+            $e->save();
         }
-        $e->save();
     }
     public function render()
     {
@@ -24,10 +26,12 @@ class Calendar extends Component
     }
     public function eventAdd($event)
 {
-    Event::create($event);
+    if(auth()->check() && auth()->user()->email == 'admin@fujitsu.com')
+        Event::create($event);
 }
 public function eventRemove($id)
 {
-    Event::destroy($id);
+    if(auth()->check() && auth()->user()->email == 'admin@fujitsu.com')
+        Event::destroy($id);
 }
 }
